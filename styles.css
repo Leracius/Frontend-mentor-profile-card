@@ -143,8 +143,14 @@ h2, .age {
     .card, .bg-pattern-card, .profile-img {
         width: 290px;
     }
+    .bg-pattern-card{
+        height: 140px;
+    }
+    .account-features {
+        padding-top: 1em;
+    }
     .card {
-        height: 350px;
+        height: 370px;
     }
     .data-profile {
         margin-bottom: 2em;
@@ -157,12 +163,12 @@ h2, .age {
         transform: translateY(-500px);
     }
     .top {
-        transform: translateX(-200px);
+        transform: translateX(-250px);
         position: relative;
     }
     
     .img-top {
-        transform: translateY(-150px);
+        transform: translateY(-180px);
         position: relative;
         
     }
