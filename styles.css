@@ -4,7 +4,7 @@
     box-sizing: content-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 :root {
     --Dark-cyan: hsl(185, 75%, 39%);
@@ -22,23 +22,24 @@ body {
 
 .back {
     display: flex;
-    z-index: -1;
+    position: relative;
 }
 
 .top {
     transform: translateX(-400px);
+    position: relative;
 }
 
 .img-top {
     transform: translateY(-500px);
+    position: relative;
     
-    z-index: -1;
 }
 
 .img-bottom {
     transform: translateX(-400px);
     margin-top: 15em;
-    z-index: -1;
+    position: relative;
 }
 article {
     position: static;
@@ -51,6 +52,7 @@ article {
     font-family: 'Kumbh Sans', sans-serif;
 }
 .card {
+    position: absolute;
     display: flex;
     flex-direction: column;
     width: 350px;
@@ -75,6 +77,7 @@ article {
     width: 96px;
     height: 96px;
     border-radius: 50%;
+    border: 1px solid gainsboro;
 }
 
 .data-profile {
@@ -85,13 +88,16 @@ article {
 
 h1 {
     font-size: 18px;
+    font-weight: 700;
 }
 h2{
     font-size: 14px;
+    font-weight: 400;
 }
 
 h2, .age {
     color: var(--Dark-gray);
+    font-weight: 400;
 }
 
 .age {
@@ -121,7 +127,9 @@ h2, .age {
     margin-bottom: 2em;
     border-top: 1px solid gainsboro;
 }
-
+.center {
+    text-align: center;
+}
 .attribution {
     margin-top: 1em;
      font-size: 11px; text-align: center;
@@ -131,12 +139,37 @@ h2, .age {
      }
 
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 375px){
+    .card, .bg-pattern-card, .profile-img {
+        width: 290px;
+    }
     .card {
-        width: 300px;
+        height: 350px;
     }
-    .bg-pattern-card {
-        width: 300px;
+    .data-profile {
+        margin-bottom: 2em;
     }
-
+    .img-top, .img-bottom {
+        width: 400px;
+        height: 400px;
+    }
+    article {
+        transform: translateY(-500px);
+    }
+    .top {
+        transform: translateX(-200px);
+        position: relative;
+    }
+    
+    .img-top {
+        transform: translateY(-150px);
+        position: relative;
+        
+    }
+    
+    .img-bottom {
+        transform: translateX(-200px);
+        margin-top: 15em;
+        position: relative;
+}
 }
