@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    background-color: var(--Dark-cyan);
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: -2;
+}
+
+.back {
+    display: flex;
+    z-index: -1;
+}
+
+.top {
+    transform: translateX(-400px);
+}
+
+.img-top {
+    transform: translateY(-500px);
+    
+    z-index: -1;
+}
+
+.img-bottom {
+    transform: translateX(-400px);
+    margin-top: 15em;
+    z-index: -1;
+}
+article {
+    position: static;
+    transform: translateY(-1125px);
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 400px;
+    background:white;
+    border-radius: 1em;
+    position: relative;
+}
+.bg-pattern-card {
+    border-top-left-radius:1em ;
+    border-top-right-radius: 1em;
+}
+.profile-img {
+    display: flex;
+    width: 350px;
+    height: 280px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.victor {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+}
+
+.data-profile {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5em;
+}
+
+h1 {
+    font-size: 18px;
+}
+h2{
+    font-size: 14px;
+}
+
+h2, .age {
+    color: var(--Dark-gray);
+}
+
+.age {
+    margin-left: 10px;
+}
+
+.name-profile {
+    display: flex;
+    margin-top: 5em;
+    justify-content: center;
+    flex-direction: column;
+}
+.name-child {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+.country {
+    text-align: center;
+}
+
+.account-features {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: flex-end;
+    margin-bottom: 2em;
+    border-top: 1px solid gainsboro;
+}
+
+.attribution {
+    margin-top: 1em;
+     font-size: 11px; text-align: center;
+     }
+.attribution a {
+     color: hsl(228, 45%, 44%);
+     }
+
+
+@media only screen and (max-width: 400px){
+    .card {
+        width: 300px;
+    }
+    .bg-pattern-card {
+        width: 300px;
+    }
+
+}
